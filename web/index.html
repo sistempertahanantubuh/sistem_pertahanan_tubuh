@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .indicator{
+      width: 50vw;
+    }
+    body{
+      background-color: #1E6CC7;
+    }
+</style>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -36,6 +51,28 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/web_loading.gif" />
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+ <!-- Firebase Configuration -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDrWD5gGvWfBMp75ERInTpH21iJZXvMwAU",
+      authDomain: "sistem-pertahanan-tubuh.firebaseapp.com",
+      projectId: "sistem-pertahanan-tubuh",
+      storageBucket: "sistem-pertahanan-tubuh.appspot.com",
+      messagingSenderId: "833919965229",
+      appId: "1:833919965229:web:b4bf8bd5a7ca5ca5eb80a4",
+      measurementId: "G-8VGTDPVDSE",
+    };
+   
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
