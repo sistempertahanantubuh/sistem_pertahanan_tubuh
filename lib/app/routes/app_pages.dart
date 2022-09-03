@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
 
 import '../modules/evaluasi/bindings/evaluasi_binding.dart';
@@ -20,10 +18,14 @@ import '../modules/rangkuman/bindings/rangkuman_binding.dart';
 import '../modules/rangkuman/views/rangkuman_view.dart';
 import '../modules/refrensi/bindings/refrensi_binding.dart';
 import '../modules/refrensi/views/refrensi_view.dart';
+import '../modules/soal/bindings/soal_binding.dart';
+import '../modules/soal/views/soal_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/standar_kompetensi/bindings/standar_kompetensi_binding.dart';
 import '../modules/standar_kompetensi/views/standar_kompetensi_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
@@ -87,6 +89,11 @@ class AppPages {
       name: _Paths.REFRENSI,
       page: () => RefrensiView(),
       binding: RefrensiBinding(),
+    ),
+    GetPage(
+      name: _Paths.SOAL,
+      page: () => const SoalView(),
+      binding: SoalBinding(),
     ),
   ];
 }

@@ -16,6 +16,7 @@ abstract class Routes {
   static const MATERI = _Paths.MATERI;
   static const RANGKUMAN = _Paths.RANGKUMAN;
   static const REFRENSI = _Paths.REFRENSI;
+  static const SOAL = _Paths.SOAL;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const MATERI = '/materi';
   static const RANGKUMAN = '/rangkuman';
   static const REFRENSI = '/refrensi';
+  static const SOAL = '/soal';
 }

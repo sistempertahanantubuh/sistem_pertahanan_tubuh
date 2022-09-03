@@ -10,18 +10,19 @@ import '../controllers/landing_controller.dart';
 class LandingView extends GetView<LandingController> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SizedBox(
-        height: Get.height,
-        width: Get.width,
+        height: size.height,
+        width: size.width,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Positioned(
               bottom: 0,
               child: Container(
-                  width: Get.width,
-                  height: Get.height * 0.3,
+                  width: size.width,
+                  height: size.height * 0.3,
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(24),
@@ -42,8 +43,8 @@ class LandingView extends GetView<LandingController> {
                       ),
                       padding: EdgeInsets.symmetric(
                           horizontal: Get.width > Get.height
-                              ? Get.width * 0.1
-                              : Get.width * 0.3,
+                              ? size.width * 0.1
+                              : size.width * 0.3,
                           vertical: 18),
                       child: Text("Mulai",
                           style: Get.textTheme.headline4!.copyWith(
@@ -53,9 +54,9 @@ class LandingView extends GetView<LandingController> {
                   )),
             ),
             Positioned(
-                bottom: Get.height * 0.26 - 40,
+                bottom: size.height * 0.26 - 40,
                 child: SizedBox(
-                  height: Get.height - Get.height * 0.5,
+                  height: size.height - size.height * 0.5,
                   child: AspectRatio(
                     aspectRatio: 1,
                     child: Padding(
@@ -69,7 +70,7 @@ class LandingView extends GetView<LandingController> {
             Align(
               alignment: Alignment.topCenter,
               child: SizedBox(
-                height: Get.height * 0.2,
+                height: size.height * 0.2,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

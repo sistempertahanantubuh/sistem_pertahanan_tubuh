@@ -10,10 +10,11 @@ class SplashView extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SizedBox(
-        height: Get.height,
-        width: Get.width,
+        height: size.height,
+        width: size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
